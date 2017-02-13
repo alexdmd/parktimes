@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
 <body>
-  <div class="alert alert-success text-center" role="alert">
+  <div id="alert-box" class="alert text-center" role="alert">
   The park is
     <h1><span id="statusLabel"></span></h1>
   </div>
@@ -302,24 +302,28 @@ for (var key in json) {
       var status;
       if (timenow > openingtime && timenow < closingtime) {
         status = "OPEN";
+              $("#alert-box").addClass("alert-success");
+
       } else {
         status = "CLOSED";
+              $("#alert-box").addClass("alert-danger");
+
       }
 
       if (timenow < openingtime && timenow > nearopeningtime) {
         status = "OPENING SOON";
+              $("#alert-box").addClass("alert-warning");
+
       }
 
       if (timenow < closingtime && timenow > nearclosingtime) {
         status = "CLOSING SOON";
+              $("#alert-box").addClass("alert-warning");
+
       }
       
-      //alert('This week ends on ' + weekenddate.format());
-      //alert('This week the park opens at ' + openingtime.format('h:mmA') + ' and closes at ' + closingtime.format('h:mmA'));
-      //alert('Time now is ' + timenow.format('h:mmA'));
-      //alert('The park is ' + status);
-      
       $("#statusLabel").text(status);
+      
       $("#openingTimeLabel").text(openingtime.format('h:mmA'));
       $("#closingTimeLabel").text(closingtime.format('h:mmA'));
       
