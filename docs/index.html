@@ -16,272 +16,164 @@
     This week the park opens at <span id="openingTimeLabel"></span> and closes at <span id="closingTimeLabel"></span>
   </p>
   <script>
-    var json = [{
-  "weekstartdate": "2016-12-26",
-  "weekenddate": "2017-01-02",
+    var json = [
+      {
+  "weekstartdate": "2018-06-25",
+  "weekenddate": "2018-07-01",
+  "openingtime": 700,
+  "closingtime": 2100
+}, 
+            {
+  "weekstartdate": "2018-07-02",
+  "weekenddate": "2018-07-08",
+  "openingtime": 700,
+  "closingtime": 2100
+}, 
+            {
+  "weekstartdate": "2018-07-09",
+  "weekenddate": "2018-07-15",
+  "openingtime": 700,
+  "closingtime": 2100
+}, 
+            {
+  "weekstartdate": "2018-07-16",
+  "weekenddate": "2018-07-22",
+  "openingtime": 700,
+  "closingtime": 2100
+}, 
+            {
+  "weekstartdate": "2018-07-23",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-01-02",
-  "weekenddate": "2017-01-09",
+}, 
+            {
+  "weekstartdate": "2018-07-30",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-01-09",
-  "weekenddate": "2017-01-16",
-  "openingtime": 730,
-  "closingtime": 1615
-}, {
-  "weekstartdate": "2017-01-16",
-  "weekenddate": "2017-01-23",
-  "openingtime": 730,
-  "closingtime": 1630
-}, {
-  "weekstartdate": "2017-01-23",
-  "weekenddate": "2017-01-30",
-  "openingtime": 730,
-  "closingtime": 1645
-}, {
-  "weekstartdate": "2017-01-30",
-  "weekenddate": "2017-02-06",
-  "openingtime": 730,
-  "closingtime": 1700
-}, {
-  "weekstartdate": "2017-02-06",
-  "weekenddate": "2017-02-13",
-  "openingtime": 730,
-  "closingtime": 1700
-}, {
-  "weekstartdate": "2017-02-13",
-  "weekenddate": "2017-02-20",
-  "openingtime": "0730",
-  "closingtime": "1715"
-}, {
-  "weekstartdate": "2017-02-20",
-  "weekenddate": "2017-02-27",
-  "openingtime": 700,
-  "closingtime": 1730
-}, {
-  "weekstartdate": "2017-02-27",
-  "weekenddate": "2017-03-06",
-  "openingtime": 700,
-  "closingtime": 1745
-}, {
-  "weekstartdate": "2017-03-06",
-  "weekenddate": "2017-03-13",
-  "openingtime": 700,
-  "closingtime": 1800
-}, {
-  "weekstartdate": "2017-03-13",
-  "weekenddate": "2017-03-20",
-  "openingtime": 700,
-  "closingtime": 1815
-}, {
-  "weekstartdate": "2017-03-20",
-  "weekenddate": "2017-03-26",
-  "openingtime": 700,
-  "closingtime": 1815
-}, {
-  "weekstartdate": "2017-03-26",
-  "weekenddate": "2017-04-03",
-  "openingtime": 700,
-  "closingtime": 1930
-}, {
-  "weekstartdate": "2017-04-03",
-  "weekenddate": "2017-04-10",
-  "openingtime": 700,
-  "closingtime": 1945
-}, {
-  "weekstartdate": "2017-04-10",
-  "weekenddate": "2017-04-17",
-  "openingtime": 700,
-  "closingtime": 2000
-}, {
-  "weekstartdate": "2017-04-17",
-  "weekenddate": "2017-04-24",
-  "openingtime": 700,
-  "closingtime": 2015
-}, {
-  "weekstartdate": "2017-04-24",
-  "weekenddate": "2017-05-01",
-  "openingtime": 700,
-  "closingtime": 2015
-}, {
-  "weekstartdate": "2017-05-01",
-  "weekenddate": "2017-05-08",
-  "openingtime": 700,
-  "closingtime": 2030
-}, {
-  "weekstartdate": "2017-05-08",
-  "weekenddate": "2017-05-15",
-  "openingtime": 700,
-  "closingtime": 2045
-}, {
-  "weekstartdate": "2017-05-15",
-  "weekenddate": "2017-05-22",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-05-22",
-  "weekenddate": "2017-05-29",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-05-29",
-  "weekenddate": "2017-06-05",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-06-05",
-  "weekenddate": "2017-06-12",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-06-12",
-  "weekenddate": "2017-06-19",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-06-19",
-  "weekenddate": "2017-06-26",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-06-26",
-  "weekenddate": "2017-07-03",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-07-03",
-  "weekenddate": "2017-07-10",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-07-10",
-  "weekenddate": "2017-07-17",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-07-17",
-  "weekenddate": "2017-07-24",
-  "openingtime": 700,
-  "closingtime": 2100
-}, {
-  "weekstartdate": "2017-07-24",
-  "weekenddate": "2017-07-31",
-  "openingtime": 700,
-  "closingtime": 2045
-}, {
-  "weekstartdate": "2017-07-31",
-  "weekenddate": "2017-08-07",
-  "openingtime": 700,
-  "closingtime": 2030
-}, {
-  "weekstartdate": "2017-08-07",
-  "weekenddate": "2017-08-14",
-  "openingtime": 700,
-  "closingtime": 2015
-}, {
-  "weekstartdate": "2017-08-14",
-  "weekenddate": "2017-08-21",
-  "openingtime": 700,
-  "closingtime": 2000
-}, {
-  "weekstartdate": "2017-08-21",
-  "weekenddate": "2017-08-28",
-  "openingtime": 700,
-  "closingtime": 1945
-}, {
-  "weekstartdate": "2017-08-28",
-  "weekenddate": "2017-09-04",
-  "openingtime": 700,
-  "closingtime": 1930
-}, {
-  "weekstartdate": "2017-09-04",
-  "weekenddate": "2017-09-11",
-  "openingtime": 700,
-  "closingtime": 1915
-}, {
-  "weekstartdate": "2017-09-11",
-  "weekenddate": "2017-09-18",
-  "openingtime": 700,
-  "closingtime": 1900
-}, {
-  "weekstartdate": "2017-09-18",
-  "weekenddate": "2017-09-25",
-  "openingtime": 700,
-  "closingtime": 1845
-}, {
-  "weekstartdate": "2017-09-25",
-  "weekenddate": "2017-10-02",
-  "openingtime": 700,
-  "closingtime": 1830
-}, {
-  "weekstartdate": "2017-10-02",
-  "weekenddate": "2017-10-09",
-  "openingtime": 700,
-  "closingtime": 1815
-}, {
-  "weekstartdate": "2017-10-09",
-  "weekenddate": "2017-10-16",
-  "openingtime": 730,
-  "closingtime": 1800
-}, {
-  "weekstartdate": "2017-10-16",
-  "weekenddate": "2017-10-23",
-  "openingtime": 730,
-  "closingtime": 1745
-}, {
-  "weekstartdate": "2017-10-23",
-  "weekenddate": "2017-10-29",
-  "openingtime": 730,
-  "closingtime": 1745
-}, {
-  "weekstartdate": "2017-10-29",
-  "weekenddate": "2017-11-06",
-  "openingtime": 730,
-  "closingtime": 1645
-}, {
-  "weekstartdate": "2017-11-06",
-  "weekenddate": "2017-11-13",
-  "openingtime": 730,
-  "closingtime": 1630
-}, {
-  "weekstartdate": "2017-11-13",
-  "weekenddate": "2017-11-20",
-  "openingtime": 730,
-  "closingtime": 1615
-}, {
-  "weekstartdate": "2017-11-20",
-  "weekenddate": "2017-11-27",
+}, 
+            {
+  "weekstartdate": "2018-08-06",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-11-27",
-  "weekenddate": "2017-12-04",
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-12-04",
-  "weekenddate": "2017-12-11",
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-12-11",
-  "weekenddate": "2017-12-18",
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-12-18",
-  "weekenddate": "2017-12-25",
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}, {
-  "weekstartdate": "2017-12-25",
-  "weekenddate": "2017-12-31",
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
   "openingtime": 730,
   "closingtime": 1600
-}];
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}, 
+            {
+  "weekstartdate": "2018-12-26",
+  "weekenddate": "2018-01-02",
+  "openingtime": 730,
+  "closingtime": 1600
+}
+     ];
 
 var timenow = moment();
 var today = moment();
